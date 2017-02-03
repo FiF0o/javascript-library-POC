@@ -1,0 +1,33 @@
+# Publish a version
+
+version is a commit number
+push tag to github to do so
+tags will be associated with releases
+
+
+git tag 1.0.0
+git push --tags
+
+
+
+# Publish new change
+
+Do change
+semantic versioning "version" : breakingChange.newFeature.patchBugFix - e.g. 1.1.0
+commit
+add tag
+push to github
+push tag to github
+npm publish
+
+
+
+# Push as a beta
+
+change
+semantic versioning e.g. 1.2.0-beta.0
+commit
+add tag e.g. 1.2.0-beta.0
+push to github
+push tag
+npm publish --tag beta
