@@ -45,3 +45,10 @@ push tag
 npm publish --tag beta
 
 When beta version is finished we remove the -beta.0 meta data and push the changes
+
+
+
+
+# Where packages are installed
+
+npm root
