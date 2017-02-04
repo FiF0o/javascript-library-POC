@@ -33,6 +33,14 @@ describe('javascript-library', function() {
             expect(starW.all).to.include(randItem);
         });
 
+        it('should return an array of random items if passed a value', function() {
+            var randItems = starW.random(3);
+            expect(randItems).to.have.length(3);
+            randItems.forEach(function(item) {
+               expect(starW.all).to.include(item);
+            });
+        });
+
     });
 
 });
