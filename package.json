@@ -4,6 +4,7 @@
   "description": "POC for npm package publishing and deploy",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "mocha src/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -28,7 +29,12 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "commitizen": "2.9.5",
+    "cz-conventional-changelog": "1.2.0",
     "mocha": "3.2.0",
     "semantic-release": "^6.3.2"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
