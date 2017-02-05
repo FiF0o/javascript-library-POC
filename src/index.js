@@ -1,10 +1,10 @@
 /**
  * Created by jonlazarini on 03/02/17.
  */
-var starWarsNames = require('./starwars-names.json');
-var uniqueRandomArray = require('unique-random-array');
+import starWarsNames from './starwars-names.json';
+import uniqueRandomArray from 'unique-random-array';
 
-var getRandomItem = uniqueRandomArray(starWarsNames)
+var getRandomItem = uniqueRandomArray(starWarsNames);
 
 // Commonjs
 module.exports = {

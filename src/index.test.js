@@ -1,8 +1,9 @@
 /**
  * Created by jonlazarini on 03/02/17.
  */
-var expect = require('chai').expect;
-var starW = require('./index');
+import 'babel-polyfill';
+import {expect} from 'chai';
+import starW from './index';
 
 // global describe from mocha
 describe('javascript-library', function() {

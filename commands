@@ -52,3 +52,9 @@ When beta version is finished we remove the -beta.0 meta data and push the chang
 # Where packages are installed
 
 npm root
+
+
+
+# Test when pkg is published
+
+npm pack
