@@ -24,6 +24,10 @@ function random(number) {
     }
 }
 
+// // check code coverage - debug purpose only
+// function debugIstanbul() {
+//     console.log('debug');
+// }
 
 /**
     Node REPL
