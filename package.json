@@ -7,6 +7,7 @@
     "commit": "git-cz",
     "test": "mocha src/index.test.js -w",
     "check-coverage": "istanbul check-coverage --statements 75 --branches 75 --functions 75 --lines 75",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "test:single": "istanbul cover -x 'src/*.test.js' _mocha -- -R spec src/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
+    "codecov.io": "0.1.6",
     "commitizen": "2.9.5",
     "cz-conventional-changelog": "1.2.0",
     "ghooks": "2.0.0",
