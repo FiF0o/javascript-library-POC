@@ -7,11 +7,19 @@ import uniqueRandomArray from 'unique-random-array';
 var getRandomItem = uniqueRandomArray(starWarsNames);
 
 // Commonjs
+/**
+ *
+ * @type {{all, random: random}}
+ */
 module.exports = {
     all: starWarsNames,
     random: random
 };
-
+/**
+ *
+ * @param number
+ * @returns {Array}
+ */
 function random(number) {
     if (number === undefined) {
         return getRandomItem();

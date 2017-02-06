@@ -11,12 +11,14 @@
     "cover": "nyc npm t",
     "check-coverage": "nyc check-coverage --statements 75 --branches 75 --functions 75 --lines 75 --compilers js:babel-register",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "report-coverage:nyc": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --copy-files --out-dir dist --ignore .*test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
-    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "test:cov": "npm run cover && nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
@@ -52,6 +54,7 @@
     "chai": "3.5.0",
     "codecov.io": "0.1.6",
     "commitizen": "2.9.5",
+    "coveralls": "2.11.16",
     "cz-conventional-changelog": "1.2.0",
     "ghooks": "2.0.0",
     "jsdoc": "3.4.3",

@@ -8,7 +8,9 @@
  * npmcdn.com
  *
  * package available when published at
- * npmcdn.com/javascript-library@1.2.0/dist/index.umd.js
+ * npmcdn.com/javascript-library@1.2.0
+ * or
+ * https://unpkg.com/javascript-library@1.2.0
  *
  **/
 
