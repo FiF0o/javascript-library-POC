@@ -1,6 +1,6 @@
 {
   "name": "javascript-library",
-  "version": "0.0.0-development",
+  "version": "0.0.0-semantically-released",
   "description": "POC for npm package publishing and deploy",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "documentation": "./node_modules/.bin/jsdoc src/*.js",
     "test": "mocha src/*.test.js --compilers js:babel-core/register",
     "watch:test": "npm t -- -w",
-    "cover": "nyc npm t",
+    "cover": "nyc report --reporter=lcov npm t",
     "check-coverage": "nyc check-coverage --statements 75 --branches 75 --functions 75 --lines 75 --compilers js:babel-register",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "report-coverage:nyc": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
@@ -17,7 +17,8 @@
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --copy-files --out-dir dist --ignore .*test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
-    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "validate": "npm run cover && npm run check-coverage"
   },
   "repository": {
     "type": "git",
@@ -72,7 +73,7 @@
       "path": "node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-      "pre-commit": "npm run cover && npm run check-coverage"
+      "pre-commit": "npm run validate"
     }
   },
   "babel": {
