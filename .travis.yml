@@ -23,6 +23,3 @@ script:
 after_success:
   - npm run report-coverage:nyc
   - npm run semantic-release
-deploy:
-  provider: npm
-  api_key: NPM_TOKEN
